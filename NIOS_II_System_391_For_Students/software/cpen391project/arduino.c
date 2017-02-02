@@ -55,5 +55,15 @@ void update(void){
 		mq4_b2 = getcharSensor();
 		mq4_Val = ((mq4_b1 & 0x1f) << 5) | (mq4_b2 & 0x1f) ;
 		printf("mq4 = %d \n", mq4_Val);
+		
+		// while in gas demo state
+		if (current_state != MENU) {
+			switch(current_state){
+				case CH4: graph_updateGasValue(mq4_Val); break;
+				case SMOKE: graph_updateGasValue(mq2_Val); break;
+				case NGAS: graph_updateGasValue(mq5_Val); break;
+				case AIRQ: graph_updateGasValue(mq135_Val); break;
+			}
+		}
 
 }

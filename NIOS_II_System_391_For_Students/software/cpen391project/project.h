@@ -13,6 +13,10 @@
 #define TRUE 1
 #define FALSE 0
 
+// Graphics
+#include "Graphics.h"
+int current_state = MENU;	// initialize it to menu
+
 /* a data type to hold a point/coord */
 typedef struct{
 int x, y; } Point;
