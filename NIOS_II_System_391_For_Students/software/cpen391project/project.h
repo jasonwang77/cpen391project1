@@ -108,7 +108,7 @@ int getcharTouch( void );
 *****************************************************************************/
 void graph_updateGasValue(int val);
 void graph_showGasFrame(int gas);
-graph_goto_menu();
+void graph_goto_menu(void);
 
 //Bresenhams_Line_Drawing_Algorithm.c
 void Line(int x1, int y1, int x2, int y2, int Colour);
