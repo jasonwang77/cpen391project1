@@ -6,23 +6,6 @@
 
 #include "Bresenhams_Line_Drawing_Algorithm.h"
 
-#define switches (volatile char *) 0x0002000
-#define hex0_1 (volatile char *) 0x0002030
-#define leds (char *) 0x0002010
-#define keys (char *) 0x0002060
-
-
-#define XRES 800
-#define YRES 480
-#include "OutGraphicsCharFont1.h"
-#include "OutGraphicsCharFont2.h"
-
-#define MENU	0
-#define CH4 	1
-#define SMOKE 	2
-#define NGAS	3
-#define AIRQ	4
-
 // clear everything
 void graph_clearAll(){
 	int i;

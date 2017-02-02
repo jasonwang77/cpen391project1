@@ -13,8 +13,24 @@
 #define TRUE 1
 #define FALSE 0
 
-// Graphics
-#include "Graphics.h"
+
+
+#define switches (volatile char *) 0x0002000
+#define hex0_1 (volatile char *) 0x0002030
+#define leds (char *) 0x0002010
+#define keys (char *) 0x0002060
+
+
+#define XRES 800
+#define YRES 480
+#include "OutGraphicsCharFont1.h"
+#include "OutGraphicsCharFont2.h"
+
+#define MENU	0
+#define CH4 	1
+#define SMOKE 	2
+#define NGAS	3
+#define AIRQ	4
 int current_state = MENU;	// initialize it to menu
 
 /* a data type to hold a point/coord */
