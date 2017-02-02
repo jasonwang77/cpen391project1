@@ -28,6 +28,27 @@ void main()
 		   printf("Release point: x = %d, y = %d\n", p2.x, p2.y);
 
 		   //TODO: What happens when the coordinate is a button?
+		   // jump to special gas state 
+		   if (current_state == MENU) {
+				if(p1.x >174 && p1.x <374 && p1.y >49 && p1.y < 214){
+					current_state = CH4;		// change state
+					graph_showGasFrame(CH4);	// show CH4 frame
+				} else if (p1.x >174 && p1.x <374 && p1.y >264 && p1.y < 429) {
+					current_state = SMOKE;		// change state
+					graph_showGasFrame(SMOKE);	// show smoke frame
+				} else if (p1.x >424 && p1.x <624 && p1.y >49 && p1.y < 214) {
+					current_state = NGAS;		// change state
+					graph_showGasFrame(NGAS);	// show natural gas frame
+				} else if (p1.x >424 && p1.x <624 && p1.y >264 && p1.y < 429) {
+					current_state = AIRQ;		// change state
+					graph_showGasFrame(AIRQ);	// show air quality frame
+				}
+		   }
+		   
+		   // jump back to menu if showing gas value
+		   if (current_state == MENU) {
+			   graph_goto_menu();
+		   }
 		   
 	   }
 	   if(SensorReceivedData()){
