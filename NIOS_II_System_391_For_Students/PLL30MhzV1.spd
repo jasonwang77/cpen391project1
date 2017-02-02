@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="PLL30MhzV1_sim/PLL30MhzV1.vho" type="VHDL" />
+ <topLevel name="PLL30MhzV1" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

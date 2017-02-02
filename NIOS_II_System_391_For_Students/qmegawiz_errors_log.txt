@@ -1,0 +1,36 @@
+
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 03PM:59:24>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 03PM:59:35>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 03PM:59:52>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 04PM:01:28>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 04PM:01:30>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 04PM:02:16>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/w4j0b/Downloads/NIOS_II_System_391_For_Students/PLL30Mhz.vhd
+
+Jan 24 04PM:02:26>: Megafunction Altera PLL v15.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
