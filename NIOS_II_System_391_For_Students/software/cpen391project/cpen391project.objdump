@@ -33,45 +33,45 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS
   7 .comment      00000023  00000000  00000000  000125f0  2**0
                   CONTENTS, READONLY
-  8 .debug_aranges 00000ce8  00000000  00000000  00012618  2**3
+  8 .debug_aranges 00000d48  00000000  00000000  00012618  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   00023ca8  00000000  00000000  00013300  2**0
+  9 .debug_info   00023d22  00000000  00000000  00013360  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00009087  00000000  00000000  00036fa8  2**0
+ 10 .debug_abbrev 0000912c  00000000  00000000  00037082  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000ae85  00000000  00000000  0004002f  2**0
+ 11 .debug_line   0000af54  00000000  00000000  000401ae  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  0000232c  00000000  00000000  0004aeb4  2**2
+ 12 .debug_frame  0000235c  00000000  00000000  0004b104  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    000033ff  00000000  00000000  0004d1e0  2**0
+ 13 .debug_str    00003421  00000000  00000000  0004d460  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00016d3e  00000000  00000000  000505df  2**0
+ 14 .debug_loc    00016d3e  00000000  00000000  00050881  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000020  00000000  00000000  00067320  2**2
+ 15 .debug_alt_sim_info 00000020  00000000  00000000  000675c0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00001368  00000000  00000000  00067340  2**3
+ 16 .debug_ranges 00001368  00000000  00000000  000675e0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0006baba  2**0
+ 17 .thread_model 00000003  00000000  00000000  0006bdac  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  0006babd  2**0
+ 18 .cpu          0000000c  00000000  00000000  0006bdaf  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  0006bac9  2**0
+ 19 .qsys         00000001  00000000  00000000  0006bdbb  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0006baca  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  0006bdbc  2**0
                   CONTENTS, READONLY
- 21 .stderr_dev   0000000b  00000000  00000000  0006bacb  2**0
+ 21 .stderr_dev   0000000b  00000000  00000000  0006bdbd  2**0
                   CONTENTS, READONLY
- 22 .stdin_dev    0000000b  00000000  00000000  0006bad6  2**0
+ 22 .stdin_dev    0000000b  00000000  00000000  0006bdc8  2**0
                   CONTENTS, READONLY
- 23 .stdout_dev   0000000b  00000000  00000000  0006bae1  2**0
+ 23 .stdout_dev   0000000b  00000000  00000000  0006bdd3  2**0
                   CONTENTS, READONLY
- 24 .sopc_system_name 0000000b  00000000  00000000  0006baec  2**0
+ 24 .sopc_system_name 0000000b  00000000  00000000  0006bdde  2**0
                   CONTENTS, READONLY
- 25 .quartus_project_dir 0000004e  00000000  00000000  0006baf7  2**0
+ 25 .quartus_project_dir 0000004e  00000000  00000000  0006bde9  2**0
                   CONTENTS, READONLY
- 26 .jdi          00004b4c  00000000  00000000  0006bb45  2**0
+ 26 .jdi          00004b4c  00000000  00000000  0006be37  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     0006bd81  00000000  00000000  00070691  2**0
+ 27 .sopcinfo     0006bd81  00000000  00000000  00070983  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 08000000 l    d  .entry	00000000 .entry
@@ -96,7 +96,10 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_exception_entry.o
 08000094 l       .exceptions	00000000 alt_exception_unknown
 00000000 l    df *ABS*	00000000 alt_irq_handler.c
+00000000 l    df *ABS*	00000000 TouchScreen.c
+00000000 l    df *ABS*	00000000 arduino.c
 00000000 l    df *ABS*	00000000 cpen391project.c
+00000000 l    df *ABS*	00000000 initial.c
 00000000 l    df *ABS*	00000000 printf.c
 00000000 l    df *ABS*	00000000 puts.c
 00000000 l    df *ABS*	00000000 strlen.c
@@ -243,7 +246,7 @@ SYMBOL TABLE:
 0801326c g       *ABS*	00000000 __alt_heap_start
 08000764 g     F .text	0000003c printf
 0800961c g     F .text	0000009c _wcrtomb_r
-08000338 g     F .text	000000d4 GetPress
+080002b0 g     F .text	000000d4 GetPress
 08007948 g     F .text	0000005c __sseek
 08004924 g     F .text	00000010 __sinit
 080094ac g     F .text	00000154 __swbuf_r
@@ -258,14 +261,14 @@ SYMBOL TABLE:
 0800e060 g     F .text	00000074 get_DDRAM_addr
 08000000 g     F .entry	0000001c __reset
 08000020 g       *ABS*	00000000 __flash_exceptions_start
-080004e0 g     F .text	00000048 getcharTouch
+08000458 g     F .text	00000048 getcharTouch
 08009348 g     F .text	00000058 _fstat_r
 08013128 g     O .bss	00000004 errno
 080078c4 g     F .text	00000008 __seofread
 08013130 g     O .bss	00000004 alt_argv
 080195b0 g       *ABS*	00000000 _gp
 080103a4 g     O .rwdata	00000180 alt_fd_list
-0800040c g     F .text	000000d4 GetRelease
+08000384 g     F .text	000000d4 GetRelease
 0800e840 g     F .text	00000090 alt_find_dev
 08005ec4 g     F .text	00000138 memcpy
 0800e270 g     F .text	00000050 alt_up_character_lcd_write_fd
@@ -298,7 +301,7 @@ SYMBOL TABLE:
 080045a4 g     F .text	00000030 fflush
 08013120 g     O .bss	00000004 __malloc_max_sbrked_mem
 0800a498 g     F .text	0000089c .hidden __adddf3
-08000528 g     F .text	00000048 getcharSensor
+080004a0 g     F .text	00000048 getcharSensor
 08006d94 g     F .text	0000011c __b2d
 08009ddc g     F .text	00000590 .hidden __umoddi3
 0800cf0c g     F .text	000000d4 lseek
@@ -313,7 +316,7 @@ SYMBOL TABLE:
 08006460 g     F .text	00000104 __s2b
 0800c990 g     F .text	000000a4 .hidden __floatunsidf
 08006b3c g     F .text	00000060 __mcmp
-08000234 g     F .text	0000004c Init_Touch
+080006ec g     F .text	0000004c Init_Touch
 08004944 g     F .text	00000018 __fp_lock_all
 0800ea94 g     F .text	0000004c alt_ic_irq_enabled
 0800ef7c g     F .text	00000098 alt_alarm_stop
@@ -330,7 +333,7 @@ SYMBOL TABLE:
 0800fad8 g       *ABS*	00000000 __ram_rodata_end
 0800cc34 g     F .text	000000b0 fstat
 0800b764 g     F .text	000000e0 .hidden __ledf2
-08000280 g     F .text	00000040 ScreenTouched
+080001f8 g     F .text	00000040 ScreenTouched
 080068b4 g     F .text	00000140 __pow5mult
 08007b64 g     F .text	0000135c ___vfiprintf_internal_r
 08013118 g     O .bss	00000004 __nlocale_changed
@@ -348,7 +351,7 @@ SYMBOL TABLE:
 08000904 g     F .text	00001ffc ___vfprintf_internal_r
 08004a98 g     F .text	000002f0 _free_r
 08005424 g     F .text	00000010 __locale_mb_cur_max
-080001f8 g     F .text	0000003c Init_Sensor
+080006b0 g     F .text	0000003c Init_Sensor
 0800f568 g     F .text	00000194 __call_exitprocs
 08013114 g     O .bss	00000004 __mlocale_changed
 080115bc g     O .rwdata	00000004 __malloc_sbrk_base
@@ -390,12 +393,12 @@ SYMBOL TABLE:
 08008f94 g     F .text	000000c4 _calloc_r
 08013108 g       *ABS*	00000000 __bss_start
 08006158 g     F .text	00000124 memset
-08000698 g     F .text	000000a0 main
+08000610 g     F .text	000000a0 main
 08013134 g     O .bss	00000004 alt_envp
 0801311c g     O .bss	00000004 __malloc_max_total_mem
 0800d578 g     F .text	00000060 altera_avalon_jtag_uart_write_fd
 08009600 g     F .text	0000001c __swbuf
-08000300 g     F .text	00000038 WaitForData
+08000278 g     F .text	00000038 WaitForData
 0800e334 g     F .text	00000088 alt_up_character_lcd_shift_cursor
 080079a4 g     F .text	00000008 __sclose
 0c000000 g       *ABS*	00000000 __alt_heap_limit
@@ -451,10 +454,10 @@ SYMBOL TABLE:
 0c000000 g       *ABS*	00000000 __alt_data_end
 08000020 g     F .exceptions	00000000 alt_exception
 08004938 g     F .text	00000004 __sfp_lock_release
-080002c0 g     F .text	00000040 SensorReceivedData
+08000238 g     F .text	00000040 SensorReceivedData
 08000000 g       *ABS*	00000000 __alt_mem_sdram
 0800e1fc g     F .text	00000074 alt_up_character_lcd_string
-08000570 g     F .text	00000128 update
+080004e8 g     F .text	00000128 update
 0800f6fc g     F .text	00000034 _exit
 0800e538 g     F .text	00000140 alt_alarm_start
 0800547c g     F .text	000001b8 __smakebuf_r
@@ -869,547 +872,547 @@ alt_after_alt_main:
     br alt_after_alt_main
  80001f4:	003fff06 	br	80001f4 <__alt_data_end+0xfc0001f4>
 
-080001f8 <Init_Sensor>:
-
-/**************************************************************************
-/* Initialization functions
-****************************************************************************/
-void Init_Sensor(void)
-{
- 80001f8:	deffff04 	addi	sp,sp,-4
- 80001fc:	df000015 	stw	fp,0(sp)
- 8000200:	d839883a 	mov	fp,sp
-	SENSOR_Control = 0x15; // binary 00010101 - divide by 16 clock, set RTS low, use 8 bits of data, no parity, 1 stop bit,
- 8000204:	00a10034 	movhi	r2,33792
- 8000208:	10808404 	addi	r2,r2,528
- 800020c:	00c00544 	movi	r3,21
- 8000210:	10c00005 	stb	r3,0(r2)
-	SENSOR_Baud = 0x05;	// program for 9600 baud
- 8000214:	00a10034 	movhi	r2,33792
- 8000218:	10808504 	addi	r2,r2,532
- 800021c:	00c00144 	movi	r3,5
- 8000220:	10c00005 	stb	r3,0(r2)
-}
- 8000224:	e037883a 	mov	sp,fp
- 8000228:	df000017 	ldw	fp,0(sp)
- 800022c:	dec00104 	addi	sp,sp,4
- 8000230:	f800283a 	ret
-
-08000234 <Init_Touch>:
-void Init_Touch(void)
-{
- 8000234:	deffff04 	addi	sp,sp,-4
- 8000238:	df000015 	stw	fp,0(sp)
- 800023c:	d839883a 	mov	fp,sp
-	//setup 6850 controller
-	TOUCH_Control = 0x15;
- 8000240:	00a10034 	movhi	r2,33792
- 8000244:	10808c04 	addi	r2,r2,560
- 8000248:	00c00544 	movi	r3,21
- 800024c:	10c00005 	stb	r3,0(r2)
-
-	//set touch screen baud rate to 9600
-	TOUCH_Baud = 0x05;
- 8000250:	00a10034 	movhi	r2,33792
- 8000254:	10808d04 	addi	r2,r2,564
- 8000258:	00c00144 	movi	r3,5
- 800025c:	10c00005 	stb	r3,0(r2)
-
-	//send enable touch command
-	TOUCH_TxData = 0x12;
- 8000260:	00a10034 	movhi	r2,33792
- 8000264:	10808c84 	addi	r2,r2,562
- 8000268:	00c00484 	movi	r3,18
- 800026c:	10c00005 	stb	r3,0(r2)
-}
- 8000270:	e037883a 	mov	sp,fp
- 8000274:	df000017 	ldw	fp,0(sp)
- 8000278:	dec00104 	addi	sp,sp,4
- 800027c:	f800283a 	ret
-
-08000280 <ScreenTouched>:
-
+080001f8 <ScreenTouched>:
+#include "project.h"
 /*****************************************************************************
    tests for screen touched or data received from SENSOR
 *****************************************************************************/
 int ScreenTouched(void)
 {
- 8000280:	deffff04 	addi	sp,sp,-4
- 8000284:	df000015 	stw	fp,0(sp)
- 8000288:	d839883a 	mov	fp,sp
+ 80001f8:	deffff04 	addi	sp,sp,-4
+ 80001fc:	df000015 	stw	fp,0(sp)
+ 8000200:	d839883a 	mov	fp,sp
 	// return TRUE if any data received from 6850 connected to touchscreen
 	// or FALSE otherwise
 	if ( (TOUCH_Status & 0x01) == 0x00 )
- 800028c:	00a10034 	movhi	r2,33792
- 8000290:	10808c04 	addi	r2,r2,560
- 8000294:	10800003 	ldbu	r2,0(r2)
- 8000298:	10803fcc 	andi	r2,r2,255
- 800029c:	1080004c 	andi	r2,r2,1
- 80002a0:	1000021e 	bne	r2,zero,80002ac <ScreenTouched+0x2c>
+ 8000204:	00a10034 	movhi	r2,33792
+ 8000208:	10808c04 	addi	r2,r2,560
+ 800020c:	10800003 	ldbu	r2,0(r2)
+ 8000210:	10803fcc 	andi	r2,r2,255
+ 8000214:	1080004c 	andi	r2,r2,1
+ 8000218:	1000021e 	bne	r2,zero,8000224 <ScreenTouched+0x2c>
 		return FALSE;
- 80002a4:	0005883a 	mov	r2,zero
- 80002a8:	00000106 	br	80002b0 <ScreenTouched+0x30>
+ 800021c:	0005883a 	mov	r2,zero
+ 8000220:	00000106 	br	8000228 <ScreenTouched+0x30>
 	else{
 		return TRUE;
- 80002ac:	00800044 	movi	r2,1
+ 8000224:	00800044 	movi	r2,1
 	}
 }
- 80002b0:	e037883a 	mov	sp,fp
- 80002b4:	df000017 	ldw	fp,0(sp)
- 80002b8:	dec00104 	addi	sp,sp,4
- 80002bc:	f800283a 	ret
+ 8000228:	e037883a 	mov	sp,fp
+ 800022c:	df000017 	ldw	fp,0(sp)
+ 8000230:	dec00104 	addi	sp,sp,4
+ 8000234:	f800283a 	ret
 
-080002c0 <SensorReceivedData>:
+08000238 <SensorReceivedData>:
 
 int SensorReceivedData(void)
 {
- 80002c0:	deffff04 	addi	sp,sp,-4
- 80002c4:	df000015 	stw	fp,0(sp)
- 80002c8:	d839883a 	mov	fp,sp
+ 8000238:	deffff04 	addi	sp,sp,-4
+ 800023c:	df000015 	stw	fp,0(sp)
+ 8000240:	d839883a 	mov	fp,sp
 	// return TRUE if any data received from 6850 connected to touchscreen
 	// or FALSE otherwise
 	if ( (SENSOR_Status & 0x01) == 0x00 )
- 80002cc:	00a10034 	movhi	r2,33792
- 80002d0:	10808404 	addi	r2,r2,528
- 80002d4:	10800003 	ldbu	r2,0(r2)
- 80002d8:	10803fcc 	andi	r2,r2,255
- 80002dc:	1080004c 	andi	r2,r2,1
- 80002e0:	1000021e 	bne	r2,zero,80002ec <SensorReceivedData+0x2c>
+ 8000244:	00a10034 	movhi	r2,33792
+ 8000248:	10808404 	addi	r2,r2,528
+ 800024c:	10800003 	ldbu	r2,0(r2)
+ 8000250:	10803fcc 	andi	r2,r2,255
+ 8000254:	1080004c 	andi	r2,r2,1
+ 8000258:	1000021e 	bne	r2,zero,8000264 <SensorReceivedData+0x2c>
 		return FALSE;
- 80002e4:	0005883a 	mov	r2,zero
- 80002e8:	00000106 	br	80002f0 <SensorReceivedData+0x30>
+ 800025c:	0005883a 	mov	r2,zero
+ 8000260:	00000106 	br	8000268 <SensorReceivedData+0x30>
 	else{
 		return TRUE;
- 80002ec:	00800044 	movi	r2,1
+ 8000264:	00800044 	movi	r2,1
 	}
 }
- 80002f0:	e037883a 	mov	sp,fp
- 80002f4:	df000017 	ldw	fp,0(sp)
- 80002f8:	dec00104 	addi	sp,sp,4
- 80002fc:	f800283a 	ret
+ 8000268:	e037883a 	mov	sp,fp
+ 800026c:	df000017 	ldw	fp,0(sp)
+ 8000270:	dec00104 	addi	sp,sp,4
+ 8000274:	f800283a 	ret
 
-08000300 <WaitForData>:
+08000278 <WaitForData>:
 
 /*****************************************************************************
 **   wait for screen or SENSOR
 *****************************************************************************/
 void WaitForData()
 {
- 8000300:	defffe04 	addi	sp,sp,-8
- 8000304:	dfc00115 	stw	ra,4(sp)
- 8000308:	df000015 	stw	fp,0(sp)
- 800030c:	d839883a 	mov	fp,sp
+ 8000278:	defffe04 	addi	sp,sp,-8
+ 800027c:	dfc00115 	stw	ra,4(sp)
+ 8000280:	df000015 	stw	fp,0(sp)
+ 8000284:	d839883a 	mov	fp,sp
 	while(!SensorReceivedData() && !ScreenTouched())
- 8000310:	0001883a 	nop
- 8000314:	80002c00 	call	80002c0 <SensorReceivedData>
- 8000318:	1000021e 	bne	r2,zero,8000324 <WaitForData+0x24>
- 800031c:	80002800 	call	8000280 <ScreenTouched>
- 8000320:	103ffc26 	beq	r2,zero,8000314 <__alt_data_end+0xfc000314>
+ 8000288:	0001883a 	nop
+ 800028c:	80002380 	call	8000238 <SensorReceivedData>
+ 8000290:	1000021e 	bne	r2,zero,800029c <WaitForData+0x24>
+ 8000294:	80001f80 	call	80001f8 <ScreenTouched>
+ 8000298:	103ffc26 	beq	r2,zero,800028c <__alt_data_end+0xfc00028c>
 				;
 }
- 8000324:	e037883a 	mov	sp,fp
- 8000328:	dfc00117 	ldw	ra,4(sp)
- 800032c:	df000017 	ldw	fp,0(sp)
- 8000330:	dec00204 	addi	sp,sp,8
- 8000334:	f800283a 	ret
+ 800029c:	e037883a 	mov	sp,fp
+ 80002a0:	dfc00117 	ldw	ra,4(sp)
+ 80002a4:	df000017 	ldw	fp,0(sp)
+ 80002a8:	dec00204 	addi	sp,sp,8
+ 80002ac:	f800283a 	ret
 
-08000338 <GetPress>:
+080002b0 <GetPress>:
 
 /*****************************************************************************
 * Touch screen get points functions
 *****************************************************************************/
 Point GetPress(void)
 {
- 8000338:	defff704 	addi	sp,sp,-36
- 800033c:	dfc00815 	stw	ra,32(sp)
- 8000340:	df000715 	stw	fp,28(sp)
- 8000344:	df000704 	addi	fp,sp,28
+ 80002b0:	defff704 	addi	sp,sp,-36
+ 80002b4:	dfc00815 	stw	ra,32(sp)
+ 80002b8:	df000715 	stw	fp,28(sp)
+ 80002bc:	df000704 	addi	fp,sp,28
 	// wait for a pen down command then return the X,Y coord of the point
 	// calibrated correctly so that it maps to a pixel on screen
 	int b1;
 
 	do{
 		b1 = getcharTouch();
- 8000348:	80004e00 	call	80004e0 <getcharTouch>
- 800034c:	e0bff915 	stw	r2,-28(fp)
+ 80002c0:	80004580 	call	8000458 <getcharTouch>
+ 80002c4:	e0bff915 	stw	r2,-28(fp)
 	}while(b1 != 0x81);
- 8000350:	e0bff917 	ldw	r2,-28(fp)
- 8000354:	10802058 	cmpnei	r2,r2,129
- 8000358:	103ffb1e 	bne	r2,zero,8000348 <__alt_data_end+0xfc000348>
+ 80002c8:	e0bff917 	ldw	r2,-28(fp)
+ 80002cc:	10802058 	cmpnei	r2,r2,129
+ 80002d0:	103ffb1e 	bne	r2,zero,80002c0 <__alt_data_end+0xfc0002c0>
 
 	int b2 = getcharTouch();
- 800035c:	80004e00 	call	80004e0 <getcharTouch>
- 8000360:	e0bffa15 	stw	r2,-24(fp)
+ 80002d4:	80004580 	call	8000458 <getcharTouch>
+ 80002d8:	e0bffa15 	stw	r2,-24(fp)
 	int b3 = getcharTouch();
- 8000364:	80004e00 	call	80004e0 <getcharTouch>
- 8000368:	e0bffb15 	stw	r2,-20(fp)
+ 80002dc:	80004580 	call	8000458 <getcharTouch>
+ 80002e0:	e0bffb15 	stw	r2,-20(fp)
 	int b4 = getcharTouch();
- 800036c:	80004e00 	call	80004e0 <getcharTouch>
- 8000370:	e0bffc15 	stw	r2,-16(fp)
+ 80002e4:	80004580 	call	8000458 <getcharTouch>
+ 80002e8:	e0bffc15 	stw	r2,-16(fp)
 	int b5 = getcharTouch();
- 8000374:	80004e00 	call	80004e0 <getcharTouch>
- 8000378:	e0bffd15 	stw	r2,-12(fp)
+ 80002ec:	80004580 	call	8000458 <getcharTouch>
+ 80002f0:	e0bffd15 	stw	r2,-12(fp)
 
 	p1.x = ((b3 & 0x1f) << 7) | (b2 & 0x7e);
- 800037c:	e0bffb17 	ldw	r2,-20(fp)
- 8000380:	108007cc 	andi	r2,r2,31
- 8000384:	100691fa 	slli	r3,r2,7
- 8000388:	e0bffa17 	ldw	r2,-24(fp)
- 800038c:	10801f8c 	andi	r2,r2,126
- 8000390:	1884b03a 	or	r2,r3,r2
- 8000394:	e0bffe15 	stw	r2,-8(fp)
+ 80002f4:	e0bffb17 	ldw	r2,-20(fp)
+ 80002f8:	108007cc 	andi	r2,r2,31
+ 80002fc:	100691fa 	slli	r3,r2,7
+ 8000300:	e0bffa17 	ldw	r2,-24(fp)
+ 8000304:	10801f8c 	andi	r2,r2,126
+ 8000308:	1884b03a 	or	r2,r3,r2
+ 800030c:	e0bffe15 	stw	r2,-8(fp)
 	p1.y = ((b5 & 0x1f) << 7) | (b4 & 0x7e);
- 8000398:	e0bffd17 	ldw	r2,-12(fp)
- 800039c:	108007cc 	andi	r2,r2,31
- 80003a0:	100691fa 	slli	r3,r2,7
- 80003a4:	e0bffc17 	ldw	r2,-16(fp)
- 80003a8:	10801f8c 	andi	r2,r2,126
- 80003ac:	1884b03a 	or	r2,r3,r2
- 80003b0:	e0bfff15 	stw	r2,-4(fp)
+ 8000310:	e0bffd17 	ldw	r2,-12(fp)
+ 8000314:	108007cc 	andi	r2,r2,31
+ 8000318:	100691fa 	slli	r3,r2,7
+ 800031c:	e0bffc17 	ldw	r2,-16(fp)
+ 8000320:	10801f8c 	andi	r2,r2,126
+ 8000324:	1884b03a 	or	r2,r3,r2
+ 8000328:	e0bfff15 	stw	r2,-4(fp)
 	p1.x = p1.x * 100 / 512;
- 80003b4:	e0bffe17 	ldw	r2,-8(fp)
- 80003b8:	10801924 	muli	r2,r2,100
- 80003bc:	1000010e 	bge	r2,zero,80003c4 <GetPress+0x8c>
- 80003c0:	10807fc4 	addi	r2,r2,511
- 80003c4:	1005d27a 	srai	r2,r2,9
- 80003c8:	e0bffe15 	stw	r2,-8(fp)
+ 800032c:	e0bffe17 	ldw	r2,-8(fp)
+ 8000330:	10801924 	muli	r2,r2,100
+ 8000334:	1000010e 	bge	r2,zero,800033c <GetPress+0x8c>
+ 8000338:	10807fc4 	addi	r2,r2,511
+ 800033c:	1005d27a 	srai	r2,r2,9
+ 8000340:	e0bffe15 	stw	r2,-8(fp)
 	p1.y = p1.y * 1000 / 8533;
- 80003cc:	e0bfff17 	ldw	r2,-4(fp)
- 80003d0:	10c0fa24 	muli	r3,r2,1000
- 80003d4:	00885544 	movi	r2,8533
- 80003d8:	1885283a 	div	r2,r3,r2
- 80003dc:	e0bfff15 	stw	r2,-4(fp)
+ 8000344:	e0bfff17 	ldw	r2,-4(fp)
+ 8000348:	10c0fa24 	muli	r3,r2,1000
+ 800034c:	00885544 	movi	r2,8533
+ 8000350:	1885283a 	div	r2,r3,r2
+ 8000354:	e0bfff15 	stw	r2,-4(fp)
 	return p1;
- 80003e0:	e0bffe17 	ldw	r2,-8(fp)
- 80003e4:	e0ffff17 	ldw	r3,-4(fp)
- 80003e8:	1009883a 	mov	r4,r2
- 80003ec:	180b883a 	mov	r5,r3
+ 8000358:	e0bffe17 	ldw	r2,-8(fp)
+ 800035c:	e0ffff17 	ldw	r3,-4(fp)
+ 8000360:	1009883a 	mov	r4,r2
+ 8000364:	180b883a 	mov	r5,r3
 }
- 80003f0:	2005883a 	mov	r2,r4
- 80003f4:	2807883a 	mov	r3,r5
- 80003f8:	e037883a 	mov	sp,fp
- 80003fc:	dfc00117 	ldw	ra,4(sp)
- 8000400:	df000017 	ldw	fp,0(sp)
- 8000404:	dec00204 	addi	sp,sp,8
- 8000408:	f800283a 	ret
+ 8000368:	2005883a 	mov	r2,r4
+ 800036c:	2807883a 	mov	r3,r5
+ 8000370:	e037883a 	mov	sp,fp
+ 8000374:	dfc00117 	ldw	ra,4(sp)
+ 8000378:	df000017 	ldw	fp,0(sp)
+ 800037c:	dec00204 	addi	sp,sp,8
+ 8000380:	f800283a 	ret
 
-0800040c <GetRelease>:
+08000384 <GetRelease>:
 
 Point GetRelease (void)
 {
- 800040c:	defff704 	addi	sp,sp,-36
- 8000410:	dfc00815 	stw	ra,32(sp)
- 8000414:	df000715 	stw	fp,28(sp)
- 8000418:	df000704 	addi	fp,sp,28
+ 8000384:	defff704 	addi	sp,sp,-36
+ 8000388:	dfc00815 	stw	ra,32(sp)
+ 800038c:	df000715 	stw	fp,28(sp)
+ 8000390:	df000704 	addi	fp,sp,28
 	// wait for a pen up command then return the X,Y coord of the point
 	// calibrated correctly so that it maps to a pixel on screen
 		int b1;
 
 		do{
 			b1 = getcharTouch();
- 800041c:	80004e00 	call	80004e0 <getcharTouch>
- 8000420:	e0bff915 	stw	r2,-28(fp)
+ 8000394:	80004580 	call	8000458 <getcharTouch>
+ 8000398:	e0bff915 	stw	r2,-28(fp)
 		}while(b1 != 0x80);
- 8000424:	e0bff917 	ldw	r2,-28(fp)
- 8000428:	10802018 	cmpnei	r2,r2,128
- 800042c:	103ffb1e 	bne	r2,zero,800041c <__alt_data_end+0xfc00041c>
+ 800039c:	e0bff917 	ldw	r2,-28(fp)
+ 80003a0:	10802018 	cmpnei	r2,r2,128
+ 80003a4:	103ffb1e 	bne	r2,zero,8000394 <__alt_data_end+0xfc000394>
 
 		int b2 = getcharTouch();
- 8000430:	80004e00 	call	80004e0 <getcharTouch>
- 8000434:	e0bffa15 	stw	r2,-24(fp)
+ 80003a8:	80004580 	call	8000458 <getcharTouch>
+ 80003ac:	e0bffa15 	stw	r2,-24(fp)
 		int b3 = getcharTouch();
- 8000438:	80004e00 	call	80004e0 <getcharTouch>
- 800043c:	e0bffb15 	stw	r2,-20(fp)
+ 80003b0:	80004580 	call	8000458 <getcharTouch>
+ 80003b4:	e0bffb15 	stw	r2,-20(fp)
 		int b4 = getcharTouch();
- 8000440:	80004e00 	call	80004e0 <getcharTouch>
- 8000444:	e0bffc15 	stw	r2,-16(fp)
+ 80003b8:	80004580 	call	8000458 <getcharTouch>
+ 80003bc:	e0bffc15 	stw	r2,-16(fp)
 		int b5 = getcharTouch();
- 8000448:	80004e00 	call	80004e0 <getcharTouch>
- 800044c:	e0bffd15 	stw	r2,-12(fp)
+ 80003c0:	80004580 	call	8000458 <getcharTouch>
+ 80003c4:	e0bffd15 	stw	r2,-12(fp)
 
 		p1.x = ((b3 & 0x1f) << 7) | (b2 & 0x7e);
- 8000450:	e0bffb17 	ldw	r2,-20(fp)
- 8000454:	108007cc 	andi	r2,r2,31
- 8000458:	100691fa 	slli	r3,r2,7
- 800045c:	e0bffa17 	ldw	r2,-24(fp)
- 8000460:	10801f8c 	andi	r2,r2,126
- 8000464:	1884b03a 	or	r2,r3,r2
- 8000468:	e0bffe15 	stw	r2,-8(fp)
+ 80003c8:	e0bffb17 	ldw	r2,-20(fp)
+ 80003cc:	108007cc 	andi	r2,r2,31
+ 80003d0:	100691fa 	slli	r3,r2,7
+ 80003d4:	e0bffa17 	ldw	r2,-24(fp)
+ 80003d8:	10801f8c 	andi	r2,r2,126
+ 80003dc:	1884b03a 	or	r2,r3,r2
+ 80003e0:	e0bffe15 	stw	r2,-8(fp)
 		p1.y = ((b5 & 0x1f) << 7) | (b4 & 0x7e);
- 800046c:	e0bffd17 	ldw	r2,-12(fp)
- 8000470:	108007cc 	andi	r2,r2,31
- 8000474:	100691fa 	slli	r3,r2,7
- 8000478:	e0bffc17 	ldw	r2,-16(fp)
- 800047c:	10801f8c 	andi	r2,r2,126
- 8000480:	1884b03a 	or	r2,r3,r2
- 8000484:	e0bfff15 	stw	r2,-4(fp)
+ 80003e4:	e0bffd17 	ldw	r2,-12(fp)
+ 80003e8:	108007cc 	andi	r2,r2,31
+ 80003ec:	100691fa 	slli	r3,r2,7
+ 80003f0:	e0bffc17 	ldw	r2,-16(fp)
+ 80003f4:	10801f8c 	andi	r2,r2,126
+ 80003f8:	1884b03a 	or	r2,r3,r2
+ 80003fc:	e0bfff15 	stw	r2,-4(fp)
 		p1.x = p1.x * 100 / 512;
- 8000488:	e0bffe17 	ldw	r2,-8(fp)
- 800048c:	10801924 	muli	r2,r2,100
- 8000490:	1000010e 	bge	r2,zero,8000498 <GetRelease+0x8c>
- 8000494:	10807fc4 	addi	r2,r2,511
- 8000498:	1005d27a 	srai	r2,r2,9
- 800049c:	e0bffe15 	stw	r2,-8(fp)
+ 8000400:	e0bffe17 	ldw	r2,-8(fp)
+ 8000404:	10801924 	muli	r2,r2,100
+ 8000408:	1000010e 	bge	r2,zero,8000410 <GetRelease+0x8c>
+ 800040c:	10807fc4 	addi	r2,r2,511
+ 8000410:	1005d27a 	srai	r2,r2,9
+ 8000414:	e0bffe15 	stw	r2,-8(fp)
 		p1.y = p1.y * 1000 / 8533;
- 80004a0:	e0bfff17 	ldw	r2,-4(fp)
- 80004a4:	10c0fa24 	muli	r3,r2,1000
- 80004a8:	00885544 	movi	r2,8533
- 80004ac:	1885283a 	div	r2,r3,r2
- 80004b0:	e0bfff15 	stw	r2,-4(fp)
+ 8000418:	e0bfff17 	ldw	r2,-4(fp)
+ 800041c:	10c0fa24 	muli	r3,r2,1000
+ 8000420:	00885544 	movi	r2,8533
+ 8000424:	1885283a 	div	r2,r3,r2
+ 8000428:	e0bfff15 	stw	r2,-4(fp)
 		return p1;
- 80004b4:	e0bffe17 	ldw	r2,-8(fp)
- 80004b8:	e0ffff17 	ldw	r3,-4(fp)
- 80004bc:	1009883a 	mov	r4,r2
- 80004c0:	180b883a 	mov	r5,r3
+ 800042c:	e0bffe17 	ldw	r2,-8(fp)
+ 8000430:	e0ffff17 	ldw	r3,-4(fp)
+ 8000434:	1009883a 	mov	r4,r2
+ 8000438:	180b883a 	mov	r5,r3
 }
- 80004c4:	2005883a 	mov	r2,r4
- 80004c8:	2807883a 	mov	r3,r5
- 80004cc:	e037883a 	mov	sp,fp
- 80004d0:	dfc00117 	ldw	ra,4(sp)
- 80004d4:	df000017 	ldw	fp,0(sp)
- 80004d8:	dec00204 	addi	sp,sp,8
- 80004dc:	f800283a 	ret
+ 800043c:	2005883a 	mov	r2,r4
+ 8000440:	2807883a 	mov	r3,r5
+ 8000444:	e037883a 	mov	sp,fp
+ 8000448:	dfc00117 	ldw	ra,4(sp)
+ 800044c:	df000017 	ldw	fp,0(sp)
+ 8000450:	dec00204 	addi	sp,sp,8
+ 8000454:	f800283a 	ret
 
-080004e0 <getcharTouch>:
+08000458 <getcharTouch>:
 
 int getcharTouch( void )
 {
- 80004e0:	deffff04 	addi	sp,sp,-4
- 80004e4:	df000015 	stw	fp,0(sp)
- 80004e8:	d839883a 	mov	fp,sp
+ 8000458:	deffff04 	addi	sp,sp,-4
+ 800045c:	df000015 	stw	fp,0(sp)
+ 8000460:	d839883a 	mov	fp,sp
 	while ( (TOUCH_Status & 0x01) == 0x00 ) {}
- 80004ec:	0001883a 	nop
- 80004f0:	00a10034 	movhi	r2,33792
- 80004f4:	10808c04 	addi	r2,r2,560
- 80004f8:	10800003 	ldbu	r2,0(r2)
- 80004fc:	10803fcc 	andi	r2,r2,255
- 8000500:	1080004c 	andi	r2,r2,1
- 8000504:	103ffa26 	beq	r2,zero,80004f0 <__alt_data_end+0xfc0004f0>
+ 8000464:	0001883a 	nop
+ 8000468:	00a10034 	movhi	r2,33792
+ 800046c:	10808c04 	addi	r2,r2,560
+ 8000470:	10800003 	ldbu	r2,0(r2)
+ 8000474:	10803fcc 	andi	r2,r2,255
+ 8000478:	1080004c 	andi	r2,r2,1
+ 800047c:	103ffa26 	beq	r2,zero,8000468 <__alt_data_end+0xfc000468>
 	return TOUCH_RxData;
- 8000508:	00a10034 	movhi	r2,33792
- 800050c:	10808c84 	addi	r2,r2,562
- 8000510:	10800003 	ldbu	r2,0(r2)
- 8000514:	10803fcc 	andi	r2,r2,255
+ 8000480:	00a10034 	movhi	r2,33792
+ 8000484:	10808c84 	addi	r2,r2,562
+ 8000488:	10800003 	ldbu	r2,0(r2)
+ 800048c:	10803fcc 	andi	r2,r2,255
 }
- 8000518:	e037883a 	mov	sp,fp
- 800051c:	df000017 	ldw	fp,0(sp)
- 8000520:	dec00104 	addi	sp,sp,4
- 8000524:	f800283a 	ret
+ 8000490:	e037883a 	mov	sp,fp
+ 8000494:	df000017 	ldw	fp,0(sp)
+ 8000498:	dec00104 	addi	sp,sp,4
+ 800049c:	f800283a 	ret
 
-08000528 <getcharSensor>:
-
-/********************************************************************************
+080004a0 <getcharSensor>:
+#include "project.h"
+/*
  * Functions to get data from Arduino and update the gas values
  */
 int getcharSensor( void )
 {
- 8000528:	deffff04 	addi	sp,sp,-4
- 800052c:	df000015 	stw	fp,0(sp)
- 8000530:	d839883a 	mov	fp,sp
+ 80004a0:	deffff04 	addi	sp,sp,-4
+ 80004a4:	df000015 	stw	fp,0(sp)
+ 80004a8:	d839883a 	mov	fp,sp
  // poll Rx bit in 6850 status register. Wait for it to become '1'
  // read received character from 6850 RxData register.
 
 	while ( (SENSOR_Status & 0x01) == 0x00 ) {}
- 8000534:	0001883a 	nop
- 8000538:	00a10034 	movhi	r2,33792
- 800053c:	10808404 	addi	r2,r2,528
- 8000540:	10800003 	ldbu	r2,0(r2)
- 8000544:	10803fcc 	andi	r2,r2,255
- 8000548:	1080004c 	andi	r2,r2,1
- 800054c:	103ffa26 	beq	r2,zero,8000538 <__alt_data_end+0xfc000538>
+ 80004ac:	0001883a 	nop
+ 80004b0:	00a10034 	movhi	r2,33792
+ 80004b4:	10808404 	addi	r2,r2,528
+ 80004b8:	10800003 	ldbu	r2,0(r2)
+ 80004bc:	10803fcc 	andi	r2,r2,255
+ 80004c0:	1080004c 	andi	r2,r2,1
+ 80004c4:	103ffa26 	beq	r2,zero,80004b0 <__alt_data_end+0xfc0004b0>
 	return SENSOR_RxData;
- 8000550:	00a10034 	movhi	r2,33792
- 8000554:	10808484 	addi	r2,r2,530
- 8000558:	10800003 	ldbu	r2,0(r2)
- 800055c:	10803fcc 	andi	r2,r2,255
+ 80004c8:	00a10034 	movhi	r2,33792
+ 80004cc:	10808484 	addi	r2,r2,530
+ 80004d0:	10800003 	ldbu	r2,0(r2)
+ 80004d4:	10803fcc 	andi	r2,r2,255
 }
- 8000560:	e037883a 	mov	sp,fp
- 8000564:	df000017 	ldw	fp,0(sp)
- 8000568:	dec00104 	addi	sp,sp,4
- 800056c:	f800283a 	ret
+ 80004d8:	e037883a 	mov	sp,fp
+ 80004dc:	df000017 	ldw	fp,0(sp)
+ 80004e0:	dec00104 	addi	sp,sp,4
+ 80004e4:	f800283a 	ret
 
-08000570 <update>:
+080004e8 <update>:
 
 //updates the gas value
 void update(void){
- 8000570:	defff404 	addi	sp,sp,-48
- 8000574:	dfc00b15 	stw	ra,44(sp)
- 8000578:	df000a15 	stw	fp,40(sp)
- 800057c:	df000a04 	addi	fp,sp,40
+ 80004e8:	defff104 	addi	sp,sp,-60
+ 80004ec:	dfc00e15 	stw	ra,56(sp)
+ 80004f0:	df000d15 	stw	fp,52(sp)
+ 80004f4:	df000d04 	addi	fp,sp,52
 	int mq2_Val;
 	int mq4_Val;
 
 	//check control,
 	do{
 		control = getcharSensor();
- 8000580:	80005280 	call	8000528 <getcharSensor>
- 8000584:	e0bff615 	stw	r2,-40(fp)
+ 80004f8:	80004a00 	call	80004a0 <getcharSensor>
+ 80004fc:	e0bff315 	stw	r2,-52(fp)
 	}while(control != 0x80);
- 8000588:	e0bff617 	ldw	r2,-40(fp)
- 800058c:	10802018 	cmpnei	r2,r2,128
- 8000590:	103ffb1e 	bne	r2,zero,8000580 <__alt_data_end+0xfc000580>
+ 8000500:	e0bff317 	ldw	r2,-52(fp)
+ 8000504:	10802018 	cmpnei	r2,r2,128
+ 8000508:	103ffb1e 	bne	r2,zero,80004f8 <__alt_data_end+0xfc0004f8>
 
 	//data for mq5
 		mq5_b1 = getcharSensor();
- 8000594:	80005280 	call	8000528 <getcharSensor>
- 8000598:	e0bff715 	stw	r2,-36(fp)
+ 800050c:	80004a00 	call	80004a0 <getcharSensor>
+ 8000510:	e0bff415 	stw	r2,-48(fp)
 		mq5_b2 = getcharSensor();
- 800059c:	80005280 	call	8000528 <getcharSensor>
- 80005a0:	e0bff815 	stw	r2,-32(fp)
+ 8000514:	80004a00 	call	80004a0 <getcharSensor>
+ 8000518:	e0bff515 	stw	r2,-44(fp)
 		mq5_Val = ((mq5_b1 & 0x1f) << 5) | (mq5_b2 & 0x1f) ;
- 80005a4:	e0bff717 	ldw	r2,-36(fp)
- 80005a8:	108007cc 	andi	r2,r2,31
- 80005ac:	1006917a 	slli	r3,r2,5
- 80005b0:	e0bff817 	ldw	r2,-32(fp)
- 80005b4:	108007cc 	andi	r2,r2,31
- 80005b8:	1884b03a 	or	r2,r3,r2
- 80005bc:	e0bff915 	stw	r2,-28(fp)
+ 800051c:	e0bff417 	ldw	r2,-48(fp)
+ 8000520:	108007cc 	andi	r2,r2,31
+ 8000524:	1006917a 	slli	r3,r2,5
+ 8000528:	e0bff517 	ldw	r2,-44(fp)
+ 800052c:	108007cc 	andi	r2,r2,31
+ 8000530:	1884b03a 	or	r2,r3,r2
+ 8000534:	e0bff615 	stw	r2,-40(fp)
 		printf("mq5 = %d, ", mq5_Val);
- 80005c0:	01020074 	movhi	r4,2049
- 80005c4:	213dcc04 	addi	r4,r4,-2256
- 80005c8:	e17ff917 	ldw	r5,-28(fp)
- 80005cc:	80007640 	call	8000764 <printf>
+ 8000538:	01020074 	movhi	r4,2049
+ 800053c:	213dcc04 	addi	r4,r4,-2256
+ 8000540:	e17ff617 	ldw	r5,-40(fp)
+ 8000544:	80007640 	call	8000764 <printf>
 	//data for mq135
 		mq135_b1 = getcharSensor();
- 80005d0:	80005280 	call	8000528 <getcharSensor>
- 80005d4:	e0bffa15 	stw	r2,-24(fp)
+ 8000548:	80004a00 	call	80004a0 <getcharSensor>
+ 800054c:	e0bff715 	stw	r2,-36(fp)
 		mq135_b2 = getcharSensor();
- 80005d8:	80005280 	call	8000528 <getcharSensor>
- 80005dc:	e0bffb15 	stw	r2,-20(fp)
+ 8000550:	80004a00 	call	80004a0 <getcharSensor>
+ 8000554:	e0bff815 	stw	r2,-32(fp)
 		mq135_Val = ((mq135_b1 & 0x1f) << 5) | (mq135_b2 & 0x1f) ;
- 80005e0:	e0bffa17 	ldw	r2,-24(fp)
- 80005e4:	108007cc 	andi	r2,r2,31
- 80005e8:	1006917a 	slli	r3,r2,5
- 80005ec:	e0bffb17 	ldw	r2,-20(fp)
- 80005f0:	108007cc 	andi	r2,r2,31
- 80005f4:	1884b03a 	or	r2,r3,r2
- 80005f8:	e0bffc15 	stw	r2,-16(fp)
+ 8000558:	e0bff717 	ldw	r2,-36(fp)
+ 800055c:	108007cc 	andi	r2,r2,31
+ 8000560:	1006917a 	slli	r3,r2,5
+ 8000564:	e0bff817 	ldw	r2,-32(fp)
+ 8000568:	108007cc 	andi	r2,r2,31
+ 800056c:	1884b03a 	or	r2,r3,r2
+ 8000570:	e0bff915 	stw	r2,-28(fp)
 		printf("mq135 = %d, ", mq135_Val);
- 80005fc:	01020074 	movhi	r4,2049
- 8000600:	213dcf04 	addi	r4,r4,-2244
- 8000604:	e17ffc17 	ldw	r5,-16(fp)
- 8000608:	80007640 	call	8000764 <printf>
+ 8000574:	01020074 	movhi	r4,2049
+ 8000578:	213dcf04 	addi	r4,r4,-2244
+ 800057c:	e17ff917 	ldw	r5,-28(fp)
+ 8000580:	80007640 	call	8000764 <printf>
 	//data for mq2
 		mq2_b1 = getcharSensor();
- 800060c:	80005280 	call	8000528 <getcharSensor>
- 8000610:	e0bffd15 	stw	r2,-12(fp)
+ 8000584:	80004a00 	call	80004a0 <getcharSensor>
+ 8000588:	e0bffa15 	stw	r2,-24(fp)
 		mq2_b2 = getcharSensor();
- 8000614:	80005280 	call	8000528 <getcharSensor>
- 8000618:	e0bffe15 	stw	r2,-8(fp)
+ 800058c:	80004a00 	call	80004a0 <getcharSensor>
+ 8000590:	e0bffb15 	stw	r2,-20(fp)
 		mq2_Val = ((mq2_b1 & 0x1f) << 5) | (mq2_b2 & 0x1f) ;
- 800061c:	e0bffd17 	ldw	r2,-12(fp)
- 8000620:	108007cc 	andi	r2,r2,31
- 8000624:	1006917a 	slli	r3,r2,5
- 8000628:	e0bffe17 	ldw	r2,-8(fp)
- 800062c:	108007cc 	andi	r2,r2,31
- 8000630:	1884b03a 	or	r2,r3,r2
- 8000634:	e0bfff15 	stw	r2,-4(fp)
-		printf("mq2 = %d, ", mq5_Val);
- 8000638:	01020074 	movhi	r4,2049
- 800063c:	213dd304 	addi	r4,r4,-2228
- 8000640:	e17ff917 	ldw	r5,-28(fp)
- 8000644:	80007640 	call	8000764 <printf>
+ 8000594:	e0bffa17 	ldw	r2,-24(fp)
+ 8000598:	108007cc 	andi	r2,r2,31
+ 800059c:	1006917a 	slli	r3,r2,5
+ 80005a0:	e0bffb17 	ldw	r2,-20(fp)
+ 80005a4:	108007cc 	andi	r2,r2,31
+ 80005a8:	1884b03a 	or	r2,r3,r2
+ 80005ac:	e0bffc15 	stw	r2,-16(fp)
+		printf("mq2 = %d, ", mq2_Val);
+ 80005b0:	01020074 	movhi	r4,2049
+ 80005b4:	213dd304 	addi	r4,r4,-2228
+ 80005b8:	e17ffc17 	ldw	r5,-16(fp)
+ 80005bc:	80007640 	call	8000764 <printf>
 	//data for mq4
-		mq2_b1 = getcharSensor();
- 8000648:	80005280 	call	8000528 <getcharSensor>
- 800064c:	e0bffd15 	stw	r2,-12(fp)
-		mq2_b2 = getcharSensor();
- 8000650:	80005280 	call	8000528 <getcharSensor>
- 8000654:	e0bffe15 	stw	r2,-8(fp)
-		mq2_Val = ((mq2_b1 & 0x1f) << 5) | (mq2_b2 & 0x1f) ;
- 8000658:	e0bffd17 	ldw	r2,-12(fp)
- 800065c:	108007cc 	andi	r2,r2,31
- 8000660:	1006917a 	slli	r3,r2,5
- 8000664:	e0bffe17 	ldw	r2,-8(fp)
- 8000668:	108007cc 	andi	r2,r2,31
- 800066c:	1884b03a 	or	r2,r3,r2
- 8000670:	e0bfff15 	stw	r2,-4(fp)
-		printf("mq4 = %d \n", mq5_Val);
- 8000674:	01020074 	movhi	r4,2049
- 8000678:	213dd604 	addi	r4,r4,-2216
- 800067c:	e17ff917 	ldw	r5,-28(fp)
- 8000680:	80007640 	call	8000764 <printf>
+		mq4_b1 = getcharSensor();
+ 80005c0:	80004a00 	call	80004a0 <getcharSensor>
+ 80005c4:	e0bffd15 	stw	r2,-12(fp)
+		mq4_b2 = getcharSensor();
+ 80005c8:	80004a00 	call	80004a0 <getcharSensor>
+ 80005cc:	e0bffe15 	stw	r2,-8(fp)
+		mq4_Val = ((mq4_b1 & 0x1f) << 5) | (mq4_b2 & 0x1f) ;
+ 80005d0:	e0bffd17 	ldw	r2,-12(fp)
+ 80005d4:	108007cc 	andi	r2,r2,31
+ 80005d8:	1006917a 	slli	r3,r2,5
+ 80005dc:	e0bffe17 	ldw	r2,-8(fp)
+ 80005e0:	108007cc 	andi	r2,r2,31
+ 80005e4:	1884b03a 	or	r2,r3,r2
+ 80005e8:	e0bfff15 	stw	r2,-4(fp)
+		printf("mq4 = %d \n", mq4_Val);
+ 80005ec:	01020074 	movhi	r4,2049
+ 80005f0:	213dd604 	addi	r4,r4,-2216
+ 80005f4:	e17fff17 	ldw	r5,-4(fp)
+ 80005f8:	80007640 	call	8000764 <printf>
 
 }
- 8000684:	e037883a 	mov	sp,fp
- 8000688:	dfc00117 	ldw	ra,4(sp)
- 800068c:	df000017 	ldw	fp,0(sp)
- 8000690:	dec00204 	addi	sp,sp,8
- 8000694:	f800283a 	ret
+ 80005fc:	e037883a 	mov	sp,fp
+ 8000600:	dfc00117 	ldw	ra,4(sp)
+ 8000604:	df000017 	ldw	fp,0(sp)
+ 8000608:	dec00204 	addi	sp,sp,8
+ 800060c:	f800283a 	ret
 
-08000698 <main>:
+08000610 <main>:
 /********************************************************************************
  * Main function
  *******************************************************************************/
 
 void main()
 {
- 8000698:	defffa04 	addi	sp,sp,-24
- 800069c:	dfc00515 	stw	ra,20(sp)
- 80006a0:	df000415 	stw	fp,16(sp)
- 80006a4:	df000404 	addi	fp,sp,16
+ 8000610:	defffa04 	addi	sp,sp,-24
+ 8000614:	dfc00515 	stw	ra,20(sp)
+ 8000618:	df000415 	stw	fp,16(sp)
+ 800061c:	df000404 	addi	fp,sp,16
    printf("Starting cpen391 project\n");
- 80006a8:	01020074 	movhi	r4,2049
- 80006ac:	213dd904 	addi	r4,r4,-2204
- 80006b0:	80008580 	call	8000858 <puts>
+ 8000620:	01020074 	movhi	r4,2049
+ 8000624:	213dd904 	addi	r4,r4,-2204
+ 8000628:	80008580 	call	8000858 <puts>
 
    Init_Sensor();
- 80006b4:	80001f80 	call	80001f8 <Init_Sensor>
+ 800062c:	80006b00 	call	80006b0 <Init_Sensor>
    Init_Touch();
- 80006b8:	80002340 	call	8000234 <Init_Touch>
+ 8000630:	80006ec0 	call	80006ec <Init_Touch>
 
    while(TRUE){
 //	   printf("Waiting for data...\n");
 	   WaitForData();
- 80006bc:	80003000 	call	8000300 <WaitForData>
+ 8000634:	80002780 	call	8000278 <WaitForData>
 //	   printf("data received\n");
 	   //determine if the data came from the screen or from SENSOR
 	   if(ScreenTouched()){
- 80006c0:	80002800 	call	8000280 <ScreenTouched>
- 80006c4:	10001826 	beq	r2,zero,8000728 <main+0x90>
+ 8000638:	80001f80 	call	80001f8 <ScreenTouched>
+ 800063c:	10001826 	beq	r2,zero,80006a0 <main+0x90>
 		   //if the data came from touch screen, decode the coordinates
 		   Point p1 = GetPress();
- 80006c8:	80003380 	call	8000338 <GetPress>
- 80006cc:	1009883a 	mov	r4,r2
- 80006d0:	180b883a 	mov	r5,r3
- 80006d4:	e13ffc15 	stw	r4,-16(fp)
- 80006d8:	e17ffd15 	stw	r5,-12(fp)
+ 8000640:	80002b00 	call	80002b0 <GetPress>
+ 8000644:	1009883a 	mov	r4,r2
+ 8000648:	180b883a 	mov	r5,r3
+ 800064c:	e13ffc15 	stw	r4,-16(fp)
+ 8000650:	e17ffd15 	stw	r5,-12(fp)
 		   Point p2 = GetRelease();
- 80006dc:	800040c0 	call	800040c <GetRelease>
- 80006e0:	1009883a 	mov	r4,r2
- 80006e4:	180b883a 	mov	r5,r3
- 80006e8:	e13ffe15 	stw	r4,-8(fp)
- 80006ec:	e17fff15 	stw	r5,-4(fp)
+ 8000654:	80003840 	call	8000384 <GetRelease>
+ 8000658:	1009883a 	mov	r4,r2
+ 800065c:	180b883a 	mov	r5,r3
+ 8000660:	e13ffe15 	stw	r4,-8(fp)
+ 8000664:	e17fff15 	stw	r5,-4(fp)
 		   printf("Press point: x = %d, y = %d\n", p1.x, p1.y);
- 80006f0:	e0fffc17 	ldw	r3,-16(fp)
- 80006f4:	e0bffd17 	ldw	r2,-12(fp)
- 80006f8:	01020074 	movhi	r4,2049
- 80006fc:	213de004 	addi	r4,r4,-2176
- 8000700:	180b883a 	mov	r5,r3
- 8000704:	100d883a 	mov	r6,r2
- 8000708:	80007640 	call	8000764 <printf>
+ 8000668:	e0fffc17 	ldw	r3,-16(fp)
+ 800066c:	e0bffd17 	ldw	r2,-12(fp)
+ 8000670:	01020074 	movhi	r4,2049
+ 8000674:	213de004 	addi	r4,r4,-2176
+ 8000678:	180b883a 	mov	r5,r3
+ 800067c:	100d883a 	mov	r6,r2
+ 8000680:	80007640 	call	8000764 <printf>
 		   printf("Release point: x = %d, y = %d\n", p2.x, p2.y);
- 800070c:	e0fffe17 	ldw	r3,-8(fp)
- 8000710:	e0bfff17 	ldw	r2,-4(fp)
- 8000714:	01020074 	movhi	r4,2049
- 8000718:	213de804 	addi	r4,r4,-2144
- 800071c:	180b883a 	mov	r5,r3
- 8000720:	100d883a 	mov	r6,r2
- 8000724:	80007640 	call	8000764 <printf>
+ 8000684:	e0fffe17 	ldw	r3,-8(fp)
+ 8000688:	e0bfff17 	ldw	r2,-4(fp)
+ 800068c:	01020074 	movhi	r4,2049
+ 8000690:	213de804 	addi	r4,r4,-2144
+ 8000694:	180b883a 	mov	r5,r3
+ 8000698:	100d883a 	mov	r6,r2
+ 800069c:	80007640 	call	8000764 <printf>
 
 		   //TODO: What happens when the coordinate is a button?
-
+		   
 	   }
 	   if(SensorReceivedData()){
- 8000728:	80002c00 	call	80002c0 <SensorReceivedData>
- 800072c:	10000126 	beq	r2,zero,8000734 <main+0x9c>
+ 80006a0:	80002380 	call	8000238 <SensorReceivedData>
+ 80006a4:	10000126 	beq	r2,zero,80006ac <main+0x9c>
 		   //if the data is from the Arduino, update gas value 
 			update(); 
- 8000730:	80005700 	call	8000570 <update>
+ 80006a8:	80004e80 	call	80004e8 <update>
 //			printf("calling update\n");
 	   }
    }
- 8000734:	003fe106 	br	80006bc <__alt_data_end+0xfc0006bc>
+ 80006ac:	003fe106 	br	8000634 <__alt_data_end+0xfc000634>
+
+080006b0 <Init_Sensor>:
+#include "project.h"
+/**************************************************************************
+/* Initialization functions
+****************************************************************************/
+void Init_Sensor(void)
+{
+ 80006b0:	deffff04 	addi	sp,sp,-4
+ 80006b4:	df000015 	stw	fp,0(sp)
+ 80006b8:	d839883a 	mov	fp,sp
+	SENSOR_Control = 0x15; // binary 00010101 - divide by 16 clock, set RTS low, use 8 bits of data, no parity, 1 stop bit,
+ 80006bc:	00a10034 	movhi	r2,33792
+ 80006c0:	10808404 	addi	r2,r2,528
+ 80006c4:	00c00544 	movi	r3,21
+ 80006c8:	10c00005 	stb	r3,0(r2)
+	SENSOR_Baud = 0x05;	// program for 9600 baud
+ 80006cc:	00a10034 	movhi	r2,33792
+ 80006d0:	10808504 	addi	r2,r2,532
+ 80006d4:	00c00144 	movi	r3,5
+ 80006d8:	10c00005 	stb	r3,0(r2)
+}
+ 80006dc:	e037883a 	mov	sp,fp
+ 80006e0:	df000017 	ldw	fp,0(sp)
+ 80006e4:	dec00104 	addi	sp,sp,4
+ 80006e8:	f800283a 	ret
+
+080006ec <Init_Touch>:
+void Init_Touch(void)
+{
+ 80006ec:	deffff04 	addi	sp,sp,-4
+ 80006f0:	df000015 	stw	fp,0(sp)
+ 80006f4:	d839883a 	mov	fp,sp
+	//setup 6850 controller
+	TOUCH_Control = 0x15;
+ 80006f8:	00a10034 	movhi	r2,33792
+ 80006fc:	10808c04 	addi	r2,r2,560
+ 8000700:	00c00544 	movi	r3,21
+ 8000704:	10c00005 	stb	r3,0(r2)
+
+	//set touch screen baud rate to 9600
+	TOUCH_Baud = 0x05;
+ 8000708:	00a10034 	movhi	r2,33792
+ 800070c:	10808d04 	addi	r2,r2,564
+ 8000710:	00c00144 	movi	r3,5
+ 8000714:	10c00005 	stb	r3,0(r2)
+
+	//send enable touch command
+	TOUCH_TxData = 0x12;
+ 8000718:	00a10034 	movhi	r2,33792
+ 800071c:	10808c84 	addi	r2,r2,562
+ 8000720:	00c00484 	movi	r3,18
+ 8000724:	10c00005 	stb	r3,0(r2)
+}
+ 8000728:	e037883a 	mov	sp,fp
+ 800072c:	df000017 	ldw	fp,0(sp)
+ 8000730:	dec00104 	addi	sp,sp,4
+ 8000734:	f800283a 	ret
 
 08000738 <_printf_r>:
  8000738:	defffd04 	addi	sp,sp,-12
@@ -14817,7 +14820,7 @@ void alt_main (void)
  800d034:	d0a6e117 	ldw	r2,-25724(gp)
  800d038:	180b883a 	mov	r5,r3
  800d03c:	100d883a 	mov	r6,r2
- 800d040:	80006980 	call	8000698 <main>
+ 800d040:	80006100 	call	8000610 <main>
  800d044:	e0bfff15 	stw	r2,-4(fp)
   close(STDOUT_FILENO);
  800d048:	01000044 	movi	r4,1

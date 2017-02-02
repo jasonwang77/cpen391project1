@@ -142,7 +142,10 @@ ACDS_VERSION := 15.0
 ELF := cpen391project.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := cpen391project.c
+C_SRCS += cpen391project.c
+C_SRCS += TouchScreen.c
+C_SRCS += arduino.c
+C_SRCS += initial.c
 CXX_SRCS :=
 ASM_SRCS :=
 
