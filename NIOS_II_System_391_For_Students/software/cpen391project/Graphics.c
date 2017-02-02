@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include "altera_up_avalon_character_lcd.h"
+#include "project.h"
 #include "Colours.h"
 #include "Fonts.h"
-#include "Fill.h"
 
-#include "Bresenhams_Line_Drawing_Algorithm.h"
+
+
+
 
 // clear everything
 void graph_clearAll(){

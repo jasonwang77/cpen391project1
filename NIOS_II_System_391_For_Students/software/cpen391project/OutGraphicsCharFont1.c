@@ -8,7 +8,6 @@
 **
 *************************************************************************************************/
 
-
 void OutGraphicsCharFont1(int x, int y, int fontcolour, int backgroundcolour, int c, int Erase)
 {
 // using register variables (as opposed to stack based ones) may make execution faster
@@ -41,7 +40,7 @@ void OutGraphicsCharFont1(int x, int y, int fontcolour, int backgroundcolour, in
 					WriteAPixel(theX+column, theY+row, theColour) ;
 
 				else {
-					if(Erase == 1)
+					if(Erase == TRUE)
 
 // if pixel is part of background (not part of character)
 // erase the background to value of variable BackGroundColour
