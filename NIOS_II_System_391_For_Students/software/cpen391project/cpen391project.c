@@ -176,12 +176,12 @@ void update(void){
 		mq2_b1 = getcharSensor();
 		mq2_b2 = getcharSensor();
 		mq2_Val = ((mq2_b1 & 0x1f) << 5) | (mq2_b2 & 0x1f) ;
-		printf("mq2 = %d, ", mq5_Val);
+		printf("mq2 = %d, ", mq2_Val);
 	//data for mq4
-		mq2_b1 = getcharSensor();
-		mq2_b2 = getcharSensor();
-		mq2_Val = ((mq2_b1 & 0x1f) << 5) | (mq2_b2 & 0x1f) ;
-		printf("mq4 = %d \n", mq5_Val);
+		mq4_b1 = getcharSensor();
+		mq4_b2 = getcharSensor();
+		mq4_Val = ((mq4_b1 & 0x1f) << 5) | (mq4_b2 & 0x1f) ;
+		printf("mq4 = %d \n", mq4_Val);
 
 }
 
@@ -209,7 +209,7 @@ void main()
 		   printf("Release point: x = %d, y = %d\n", p2.x, p2.y);
 
 		   //TODO: What happens when the coordinate is a button?
-
+		   
 	   }
 	   if(SensorReceivedData()){
 		   //if the data is from the Arduino, update gas value 
