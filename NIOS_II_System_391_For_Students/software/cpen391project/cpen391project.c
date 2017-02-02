@@ -1,4 +1,10 @@
 #include "project.h"
+#define MENU	0
+#define CH4 	1
+#define SMOKE 	2
+#define NGAS	3
+#define AIRQ	4
+current_state = MENU;	// initialize it to menu
 
 //variables to hold the gas values
 int mq5;
@@ -16,6 +22,9 @@ void main()
    Init_Touch();
 
    while(TRUE){
+	   if (current_state == MENU) {
+		   graph_goto_menu();
+	   }
 //	   printf("Waiting for data...\n");
 	   WaitForData();
 //	   printf("data received\n");
@@ -46,7 +55,8 @@ void main()
 		   }
 		   
 		   // jump back to menu if showing gas value
-		   if (current_state == MENU) {
+		   else {
+			   current_state = MENU;
 			   graph_goto_menu();
 		   }
 		   

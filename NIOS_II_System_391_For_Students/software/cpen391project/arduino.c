@@ -2,6 +2,11 @@
 
 
 #include "project.h"
+#define MENU	0
+#define CH4 	1
+#define SMOKE 	2
+#define NGAS	3
+#define AIRQ	4
 /*
  * Functions to get data from Arduino and update the gas values
  */

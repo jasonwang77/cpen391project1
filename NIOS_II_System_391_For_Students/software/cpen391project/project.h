@@ -16,7 +16,7 @@
 
 
 
-#include <stdio.h>
+
 
 // #defined constants representing values we write to the graphics 'command' register to get
 // it to do something. You will add more values as you add hardware to the graphics chip
@@ -33,7 +33,7 @@
 ** This macro pauses until the graphics chip status register indicates that it is idle
 *******************************************************************************************/
 
-#define WAIT_FOR_GRAPHICS		while((GraphicsStatusReg & 0x0001) != 0x0001);
+//#define WAIT_FOR_GRAPHICS		while((GraphicsStatusReg & 0x0001) != 0x0001);
 
 //Predefined Colour Values
 //Use the symbolic constants below as the values to write to the Colour Register
@@ -44,14 +44,7 @@
 // while the source file ColourPaletteData.c contains the 24 bit RGB data
 // that is pre-programmed into each of the 256 palettes
 
-#define	BLACK		0
-#define	WHITE		1
-#define	RED			2
-#define	LIME		3
-#define	BLUE		4
-#define	YELLOW		5
-#define	CYAN		6
-#define	MAGENTA		7
+
 
 
 #define GraphicsCommandReg   		(*(volatile unsigned short int *)(0x84000000))
@@ -63,15 +56,14 @@
 #define GraphicsColourReg		(*(volatile unsigned short int *)(0x8400000E))
 #define GraphicsBackGroundColourReg   		(*(volatile unsigned short int *)(0x84000010))
 
-#define XRES 800
-#define YRES 480
+
 
 #define MENU	0
 #define CH4 	1
 #define SMOKE 	2
 #define NGAS	3
 #define AIRQ	4
-int current_state = MENU;	// initialize it to menu
+int current_state;
 
 
 /* a data type to hold a point/coord */
@@ -80,7 +72,7 @@ int x, y; } Point;
 
 //initial.c
 /**************************************************************************
-/* Initialization functions
+* Initialization functions
 ****************************************************************************/
 void Init_Sensor(void);
 void Init_Touch(void);

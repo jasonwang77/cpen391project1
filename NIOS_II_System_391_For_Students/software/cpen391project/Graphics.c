@@ -1,10 +1,22 @@
 #include "project.h"
 #include "Colours.h"
-#include "Fonts.h"
 
 
+#define	BLACK		0
+#define	WHITE		1
+#define	RED			2
+#define	LIME		3
+#define	BLUE		4
+#define	YELLOW		5
+#define	CYAN		6
+#define	MAGENTA		7
+#define GREEN		100
 
-
+#define MENU	0
+#define CH4 	1
+#define SMOKE 	2
+#define NGAS	3
+#define AIRQ	4
 
 // clear everything
 void graph_clearAll(){

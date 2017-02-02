@@ -1,6 +1,10 @@
+#include "Fonts.h"
+
 #define FONT2_XPIXELS	10				// width of Font2 characters in pixels (no spacing)
 #define FONT2_YPIXELS	14				// height of Font2 characters in pixels (no spacing)
 
+#define XRES 800
+#define YRES 480
 
 /******************************************************************************************************************************
 ** This function draws a single ASCII character at the coord specified using the colour specified
@@ -37,7 +41,7 @@ void OutGraphicsCharFont2a(int x, int y, int colour, int backgroundcolour, int c
 				if((pixels & BitMask))														// if valid pixel, then write it
 					WriteAPixel(theX+column, theY+row, theColour) ;
 				else {																		// if not a valid pixel, do we erase or leave it along (no erase)
-					if(Erase == TRUE)
+					if(Erase == 1)
 						WriteAPixel(theX+column, theY+row, backgroundcolour) ;
 					// else leave it alone
 				}

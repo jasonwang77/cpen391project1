@@ -15,7 +15,7 @@
 
 #define WAIT_FOR_GRAPHICS		while((GraphicsStatusReg & 0x0001) != 0x0001);
 
-Here are some software routines to drive some simple graphics functions
+//Here are some software routines to drive some simple graphics functions
 
 // #defined constants representing values we write to the graphics 'command' register to get
 // it to draw something. You will add more values as you add hardware to the graphics chip
@@ -67,7 +67,7 @@ int ReadAPixel(int x, int y)
 {
 	WAIT_FOR_GRAPHICS;			// is graphics ready for new command
 
-	GraphicsX1Reg = x			// write coords to x1, y1
+	GraphicsX1Reg = x;			// write coords to x1, y1
 	GraphicsY1Reg = y;
 	GraphicsCommandReg = GetAPixel;		// give graphics a "get pixel" command
 
